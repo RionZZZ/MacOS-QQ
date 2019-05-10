@@ -11,6 +11,8 @@
 		AE06992022850D9300E53797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06991F22850D9300E53797 /* ViewController.swift */; };
 		AE06992222850D9400E53797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE06992122850D9400E53797 /* Assets.xcassets */; };
 		AE06992522850D9400E53797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE06992322850D9400E53797 /* Main.storyboard */; };
+		AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06992D2285134800E53797 /* LoginWindowController.swift */; };
+		AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06992F22851B3700E53797 /* LoginAvatarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		AE06992422850D9400E53797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE06992622850D9400E53797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE06992722850D9400E53797 /* MyQQ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyQQ.entitlements; sourceTree = "<group>"; };
+		AE06992D2285134800E53797 /* LoginWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWindowController.swift; sourceTree = "<group>"; };
+		AE06992F22851B3700E53797 /* LoginAvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAvatarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			children = (
 				AE06991D22850D9300E53797 /* AppDelegate.swift */,
 				AE06991F22850D9300E53797 /* ViewController.swift */,
+				AE06992D2285134800E53797 /* LoginWindowController.swift */,
+				AE06992F22851B3700E53797 /* LoginAvatarButton.swift */,
 				AE06992122850D9400E53797 /* Assets.xcassets */,
 				AE06992322850D9400E53797 /* Main.storyboard */,
 				AE06992622850D9400E53797 /* Info.plist */,
@@ -95,6 +101,14 @@
 				TargetAttributes = {
 					AE06991922850D9300E53797 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 0;
+							};
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -134,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
+				AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */,
+				AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */,
 				AE06991E22850D9300E53797 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
