@@ -15,6 +15,8 @@
 		AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE06992F22851B3700E53797 /* LoginAvatarButton.swift */; };
 		AE2C68652292439B0031678C /* LoginAccountField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C68642292439B0031678C /* LoginAccountField.swift */; };
 		AE2C68672292456F0031678C /* LoginPwdField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C68662292456F0031678C /* LoginPwdField.swift */; };
+		AE2C686922925C730031678C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C686822925C730031678C /* SettingViewController.swift */; };
+		AE2C686D2292AE320031678C /* 登录状态切换的音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE2C686C2292AE320031678C /* 登录状态切换的音效.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		AE06992F22851B3700E53797 /* LoginAvatarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAvatarButton.swift; sourceTree = "<group>"; };
 		AE2C68642292439B0031678C /* LoginAccountField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAccountField.swift; sourceTree = "<group>"; };
 		AE2C68662292456F0031678C /* LoginPwdField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPwdField.swift; sourceTree = "<group>"; };
+		AE2C686822925C730031678C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		AE2C686C2292AE320031678C /* 登录状态切换的音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "登录状态切换的音效.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			children = (
 				AE06991D22850D9300E53797 /* AppDelegate.swift */,
 				AE06991F22850D9300E53797 /* ViewController.swift */,
+				AE2C686822925C730031678C /* SettingViewController.swift */,
 				AE06992D2285134800E53797 /* LoginWindowController.swift */,
 				AE06992F22851B3700E53797 /* LoginAvatarButton.swift */,
 				AE2C68642292439B0031678C /* LoginAccountField.swift */,
@@ -71,6 +76,7 @@
 				AE06992322850D9400E53797 /* Main.storyboard */,
 				AE06992622850D9400E53797 /* Info.plist */,
 				AE06992722850D9400E53797 /* MyQQ.entitlements */,
+				AE2C686C2292AE320031678C /* 登录状态切换的音效.mp3 */,
 			);
 			path = MyQQ;
 			sourceTree = "<group>";
@@ -143,6 +149,7 @@
 			files = (
 				AE06992222850D9400E53797 /* Assets.xcassets in Resources */,
 				AE06992522850D9400E53797 /* Main.storyboard in Resources */,
+				AE2C686D2292AE320031678C /* 登录状态切换的音效.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +165,7 @@
 				AE2C68652292439B0031678C /* LoginAccountField.swift in Sources */,
 				AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */,
 				AE2C68672292456F0031678C /* LoginPwdField.swift in Sources */,
+				AE2C686922925C730031678C /* SettingViewController.swift in Sources */,
 				AE06991E22850D9300E53797 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

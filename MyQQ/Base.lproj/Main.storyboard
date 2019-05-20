@@ -793,14 +793,43 @@
                                             <action selector="onLoginClick:" target="XfG-lQ-9wD" id="dij-dS-0MG"/>
                                         </connections>
                                     </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-5s-c0A">
+                                        <rect key="frame" x="118" y="10" width="13" height="8"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="13" id="746-eu-9m2"/>
+                                            <constraint firstAttribute="height" constant="7.5" id="dlm-cP-hrM"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Login_down" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" sound="登录状态切换的音效" inset="2" id="JVK-zi-pmw">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="onArrowClick:" target="XfG-lQ-9wD" id="MQL-Eu-RdI"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="7jM-RN-MoQ">
+                                        <rect key="frame" x="226" y="294" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="XFo-R7-ETv"/>
+                                            <constraint firstAttribute="height" constant="15" id="yi8-6Y-gKK"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="qrcode_image" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PWy-hq-iZ0">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="248" id="19D-1W-9aq"/>
                                     <constraint firstItem="4qf-nC-p9s" firstAttribute="leading" secondItem="8QR-Jj-Ege" secondAttribute="leading" id="1B9-nk-8cU"/>
                                     <constraint firstItem="9Y4-iW-usf" firstAttribute="centerX" secondItem="tef-Kc-UTT" secondAttribute="centerX" id="6II-yH-nkm"/>
                                     <constraint firstItem="RuJ-s8-arV" firstAttribute="top" secondItem="Z0d-qE-8QJ" secondAttribute="bottom" constant="2" id="7jq-mt-Tui"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rh2-5s-c0A" secondAttribute="bottom" constant="10" id="Deu-kc-Qhh"/>
                                     <constraint firstItem="JWF-zA-t1X" firstAttribute="top" secondItem="tef-Kc-UTT" secondAttribute="top" constant="7" id="EDV-1S-6A9"/>
                                     <constraint firstAttribute="height" constant="316" id="HBp-6m-QEM"/>
+                                    <constraint firstItem="Rh2-5s-c0A" firstAttribute="centerX" secondItem="tef-Kc-UTT" secondAttribute="centerX" id="K0q-e8-RRr"/>
+                                    <constraint firstAttribute="trailing" secondItem="7jM-RN-MoQ" secondAttribute="trailing" constant="7" id="NMp-NP-ZPy"/>
+                                    <constraint firstItem="7jM-RN-MoQ" firstAttribute="top" secondItem="tef-Kc-UTT" secondAttribute="top" constant="7" id="WCA-6f-qc0"/>
                                     <constraint firstItem="Z0d-qE-8QJ" firstAttribute="leading" secondItem="RuJ-s8-arV" secondAttribute="leading" id="XHB-xZ-6Xx"/>
                                     <constraint firstItem="4qf-nC-p9s" firstAttribute="top" secondItem="8QR-Jj-Ege" secondAttribute="bottom" constant="2" id="XUa-Eb-Jhj"/>
                                     <constraint firstItem="JWF-zA-t1X" firstAttribute="leading" secondItem="tef-Kc-UTT" secondAttribute="leading" constant="9" id="gY0-KZ-Oyj"/>
@@ -823,6 +852,7 @@
                     </view>
                     <connections>
                         <outlet property="accountField" destination="8QR-Jj-Ege" id="Zsg-S3-35t"/>
+                        <outlet property="arrowButton" destination="Rh2-5s-c0A" id="sOZ-7a-LWl"/>
                         <outlet property="loginButton" destination="tVh-hp-2vK" id="PsL-kO-jW2"/>
                         <outlet property="pwdField" destination="Z0d-qE-8QJ" id="Pn4-C8-sVN"/>
                     </connections>
@@ -831,10 +861,60 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="Z4j-bM-wAJ">
+            <objects>
+                <viewController identifier="settingVC" storyboardIdentifier="settingVC" id="E7s-6w-OLB" customClass="SettingViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="c67-z8-3oh">
+                        <rect key="frame" x="0.0" y="0.0" width="248" height="75"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pe9-Zn-RDM">
+                                <rect key="frame" x="18" y="44" width="76" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="记住密码" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="pDJ-na-J8l">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khs-Gl-00C">
+                                <rect key="frame" x="18" y="13" width="76" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="自动登录" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="80m-iy-vUe">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="juS-tx-jbJ">
+                                <rect key="frame" x="174" y="45" width="54" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="忘记密码" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="IEj-ao-GrY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFh-JY-3Wr">
+                                <rect key="frame" x="174" y="15" width="54" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="注册账号" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="dJC-ws-XO2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="lq5-hC-9gH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="914"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Login_down" width="26" height="15"/>
         <image name="avater" width="400" height="400"/>
         <image name="close" width="28" height="28"/>
         <image name="enterButton" width="48" height="48"/>
+        <image name="qrcode_image" width="30" height="30"/>
+        <sound name="登录状态切换的音效"/>
     </resources>
 </document>
