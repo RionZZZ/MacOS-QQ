@@ -18,7 +18,6 @@ class LoginWindowController: NSWindowController {
         window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
         window?.standardWindowButton(.zoomButton)?.isHidden = true
         
-        
         //窗口移动
         window?.isMovableByWindowBackground = true
         

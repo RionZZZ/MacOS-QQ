@@ -9,9 +9,17 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
+    
+    @IBOutlet weak var accountField: LoginAccountField!
+    @IBOutlet weak var pwdField: LoginPwdField!
+    @IBOutlet weak var loginButton: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(forName: NSText.didChangeNotification, object: nil, queue: OperationQueue.main) { (notifi) in
+                self.loginButton.isEnabled = !self.accountField.stringValue.isEmpty && !self.pwdField.stringValue.isEmpty
+        }
 
     }
 
@@ -27,6 +35,8 @@ class ViewController: NSViewController {
         NSApp.terminate(sender)
     }
     
+    @IBAction func onLoginClick(_ sender: NSButton) {
+    }
     
     
 

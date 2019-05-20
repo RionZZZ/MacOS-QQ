@@ -737,19 +737,20 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
-                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-Jj-Ege">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-Jj-Ege" customClass="LoginAccountField" customModule="MyQQ" customModuleProvider="target">
                                         <rect key="frame" x="34" y="107" width="180" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="3Sk-11-nkW"/>
                                             <constraint firstAttribute="width" constant="180" id="Xd1-ep-q5k"/>
                                         </constraints>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="输入账号" drawsBackground="YES" id="knG-1W-7Lu">
+                                            <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="xiQ-Ke-uaz"/>
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z0d-qE-8QJ">
+                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z0d-qE-8QJ" customClass="LoginPwdField" customModule="MyQQ" customModuleProvider="target">
                                         <rect key="frame" x="34" y="63" width="160" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Pji-Dj-tbi"/>
@@ -784,10 +785,13 @@
                                             <constraint firstAttribute="width" constant="20" id="R6c-Ps-a9D"/>
                                             <constraint firstAttribute="height" constant="20" id="hhu-xu-k8T"/>
                                         </constraints>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="enterButton" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="txo-Fe-kAl">
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="enterButton" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="txo-Fe-kAl">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="onLoginClick:" target="XfG-lQ-9wD" id="dij-dS-0MG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -817,6 +821,11 @@
                             <constraint firstAttribute="trailing" secondItem="tef-Kc-UTT" secondAttribute="trailing" id="lim-27-83d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accountField" destination="8QR-Jj-Ege" id="Zsg-S3-35t"/>
+                        <outlet property="loginButton" destination="tVh-hp-2vK" id="PsL-kO-jW2"/>
+                        <outlet property="pwdField" destination="Z0d-qE-8QJ" id="Pn4-C8-sVN"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
