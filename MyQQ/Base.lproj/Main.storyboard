@@ -817,6 +817,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="onQrcodeClick:" target="XfG-lQ-9wD" id="LAz-Vk-Nsg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -855,11 +858,75 @@
                         <outlet property="arrowButton" destination="Rh2-5s-c0A" id="sOZ-7a-LWl"/>
                         <outlet property="loginButton" destination="tVh-hp-2vK" id="PsL-kO-jW2"/>
                         <outlet property="pwdField" destination="Z0d-qE-8QJ" id="Pn4-C8-sVN"/>
+                        <outlet property="qrButton" destination="7jM-RN-MoQ" id="Iux-5X-bPN"/>
+                        <outlet property="qrView" destination="ijw-e6-4xd" id="gRb-mu-tPn"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customView id="ijw-e6-4xd">
+                    <rect key="frame" x="0.0" y="0.0" width="248" height="286"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-u3-pFD">
+                            <rect key="frame" x="0.0" y="0.0" width="248" height="286"/>
+                            <subviews>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sAI-wU-ZCk">
+                                    <rect key="frame" x="68" y="84" width="112" height="112"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="112" id="4tm-WL-woK"/>
+                                        <constraint firstAttribute="width" constant="112" id="QQT-bA-q8Q"/>
+                                    </constraints>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="3_01" id="H1W-yu-cLX"/>
+                                </imageView>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pYk-Bf-ocR">
+                                    <rect key="frame" x="28" y="241" width="192" height="19"/>
+                                    <textFieldCell key="cell" lineBreakMode="clipping" title="使用QQ手机手机手机扫描" id="txc-Ks-Tg0">
+                                        <font key="font" metaFont="system" size="16"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XRV-po-4K3">
+                                    <rect key="frame" x="18" y="20" width="68" height="20"/>
+                                    <buttonCell key="cell" type="square" title="账号登录" bezelStyle="shadowlessSquare" image="3_02" imagePosition="left" inset="2" id="54j-jo-O6H">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="onBackClick:" target="XfG-lQ-9wD" id="QD8-jo-BvX"/>
+                                    </connections>
+                                </button>
+                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q0u-ra-aeX">
+                                    <rect key="frame" x="158" y="23" width="72" height="15"/>
+                                    <buttonCell key="cell" type="roundRect" title="下载手机QQ" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="TvA-jX-Zwr">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                    </buttonCell>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="XRV-po-4K3" secondAttribute="bottom" constant="20" id="5Yz-6B-fcI"/>
+                                <constraint firstItem="Q0u-ra-aeX" firstAttribute="centerY" secondItem="XRV-po-4K3" secondAttribute="centerY" id="AXn-ee-bXg"/>
+                                <constraint firstAttribute="trailing" secondItem="Q0u-ra-aeX" secondAttribute="trailing" constant="18" id="IsD-bL-eVI"/>
+                                <constraint firstAttribute="width" constant="248" id="StK-L3-9Wr"/>
+                                <constraint firstItem="sAI-wU-ZCk" firstAttribute="top" secondItem="pYk-Bf-ocR" secondAttribute="bottom" constant="45" id="Vbo-fR-gZ0"/>
+                                <constraint firstItem="XRV-po-4K3" firstAttribute="leading" secondItem="Sw5-u3-pFD" secondAttribute="leading" constant="18" id="cTD-fF-PTi"/>
+                                <constraint firstItem="pYk-Bf-ocR" firstAttribute="top" secondItem="Sw5-u3-pFD" secondAttribute="top" constant="26" id="dVj-jF-JmW"/>
+                                <constraint firstItem="sAI-wU-ZCk" firstAttribute="centerX" secondItem="Sw5-u3-pFD" secondAttribute="centerX" id="kGA-K2-eby"/>
+                                <constraint firstAttribute="height" constant="286" id="psh-Sk-fNf"/>
+                                <constraint firstItem="pYk-Bf-ocR" firstAttribute="centerX" secondItem="Sw5-u3-pFD" secondAttribute="centerX" id="rsR-LS-hyR"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Sw5-u3-pFD" firstAttribute="top" secondItem="ijw-e6-4xd" secondAttribute="top" id="IiG-kQ-U0K"/>
+                        <constraint firstAttribute="bottom" secondItem="Sw5-u3-pFD" secondAttribute="bottom" id="MMU-mw-dap"/>
+                        <constraint firstItem="Sw5-u3-pFD" firstAttribute="leading" secondItem="ijw-e6-4xd" secondAttribute="leading" id="OwI-4F-Tos"/>
+                        <constraint firstAttribute="trailing" secondItem="Sw5-u3-pFD" secondAttribute="trailing" id="e1M-kI-2jJ"/>
+                    </constraints>
+                </customView>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="487" y="669"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Z4j-bM-wAJ">
@@ -910,6 +977,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3_01" width="224" height="224"/>
+        <image name="3_02" width="10" height="20"/>
         <image name="Login_down" width="26" height="15"/>
         <image name="avater" width="400" height="400"/>
         <image name="close" width="28" height="28"/>
