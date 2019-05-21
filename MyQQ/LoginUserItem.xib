@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LoginUserItem" customModule="MyQQ" customModuleProvider="target">
+            <connections>
+                <outlet property="imageButton" destination="dfr-pc-KL1" id="pYP-zi-TnU"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="dfr-pc-KL1" customClass="LoginAvatarButton" customModule="MyQQ" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="PvT-zW-cgW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onAvatarClick:" target="-2" id="yCo-zm-RUP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="dfr-pc-KL1" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="1oI-Nh-JwY"/>
+                <constraint firstItem="dfr-pc-KL1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ECf-Kz-jY0"/>
+                <constraint firstAttribute="trailing" secondItem="dfr-pc-KL1" secondAttribute="trailing" id="GCM-Op-Ovb"/>
+                <constraint firstAttribute="bottom" secondItem="dfr-pc-KL1" secondAttribute="bottom" id="Qsf-zr-cuP"/>
+            </constraints>
+        </customView>
+        <customObject id="YEB-8L-jRC" customClass="LoginUserItem" customModule="MyQQ" customModuleProvider="target"/>
+    </objects>
+</document>

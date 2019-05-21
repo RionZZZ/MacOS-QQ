@@ -19,6 +19,7 @@ class LoginAvatarButton: NSButton {
         super.draw(dirtyRect)
 
         layer?.cornerRadius = dirtyRect.width / 2
+        imageScaling = .scaleAxesIndependently
         
         let trackingArea = NSTrackingArea(rect: bounds, options: [.mouseEnteredAndExited, .activeInActiveApp], owner: self, userInfo: nil)
         addTrackingArea(trackingArea)
