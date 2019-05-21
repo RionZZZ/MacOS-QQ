@@ -20,6 +20,7 @@
 		AE2C68702292EBB00031678C /* LoginUserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C686E2292EBB00031678C /* LoginUserItem.swift */; };
 		AE2C68712292EBB00031678C /* LoginUserItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2C686F2292EBB00031678C /* LoginUserItem.xib */; };
 		AE2C68732292EC490031678C /* LoginUserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C68722292EC490031678C /* LoginUserItemModel.swift */; };
+		AE77BAD22293CD0F009A456A /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BAD12293CD0F009A456A /* StatusButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		AE2C686E2292EBB00031678C /* LoginUserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserItem.swift; sourceTree = "<group>"; };
 		AE2C686F2292EBB00031678C /* LoginUserItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserItem.xib; sourceTree = "<group>"; };
 		AE2C68722292EC490031678C /* LoginUserItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserItemModel.swift; sourceTree = "<group>"; };
+		AE77BAD12293CD0F009A456A /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				AE06991D22850D9300E53797 /* AppDelegate.swift */,
 				AE06991F22850D9300E53797 /* ViewController.swift */,
+				AE77BAD12293CD0F009A456A /* StatusButton.swift */,
 				AE2C686822925C730031678C /* SettingViewController.swift */,
 				AE06992D2285134800E53797 /* LoginWindowController.swift */,
 				AE06992F22851B3700E53797 /* LoginAvatarButton.swift */,
@@ -173,6 +176,7 @@
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
 				AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */,
 				AE2C68652292439B0031678C /* LoginAccountField.swift in Sources */,
+				AE77BAD22293CD0F009A456A /* StatusButton.swift in Sources */,
 				AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */,
 				AE2C68672292456F0031678C /* LoginPwdField.swift in Sources */,
 				AE2C68702292EBB00031678C /* LoginUserItem.swift in Sources */,

@@ -20,7 +20,7 @@ class ViewController: NSViewController {
     @IBOutlet var qrView: NSView!
     
     lazy var settingWindow: NSWindow = {
-        let window = NSWindow(contentRect: NSMakeRect((view.window?.frame.origin.x)!, (view.window?.frame.origin.y)! - 100, (view.window?.frame.size.width)!, 100), styleMask: [.titled], backing: NSWindow.BackingStoreType.buffered, defer: true)
+        let window = NSWindow(contentRect: NSMakeRect((view.window?.frame.origin.x)!, (view.window?.frame.origin.y)! + 99, (view.window?.frame.size.width)!, 78), styleMask: [.titled], backing: NSWindow.BackingStoreType.buffered, defer: true)
         window.contentViewController = NSStoryboard(name: NSStoryboard.Name.init("Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier.init("settingVC")) as! SettingViewController
         view.window?.addChildWindow(window, ordered: .below)
         
@@ -31,13 +31,29 @@ class ViewController: NSViewController {
     private let sound = NSSound(named: NSSound.Name.init("登录状态切换的音效.mp3"))
     
     //用户数据
-    var userData = Array<String>()
+    var userData = Array<LoginUserItemModel>()
     var itemRect: NSRect?
     lazy var transitionItem: LoginAvatarButton = {
         let button = LoginAvatarButton()
         button.target = self
         button.action = #selector(handleTransition(button:))
         button.isBordered = false
+        button.imageScaling = .scaleAxesIndependently
+        return button
+    }()
+    
+    let statusButtonHeight: CGFloat = 16
+    lazy var statusButton: StatusButton = {
+       let button = StatusButton()
+        button.image = #imageLiteral(resourceName: "online_status")
+        button.isBordered = false
+        button.imageScaling = .scaleAxesIndependently
+        button.target = self
+        button.action = #selector(changeStatusButton(button:))
+        
+        //修改约束必须加上此属性，配合.isActive=true使用
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }()
     
@@ -62,7 +78,26 @@ class ViewController: NSViewController {
         super.viewWillAppear()
         
         //赋值数据
-        userData = ["2_01","2_02","2_03","2_04","2_05"]
+        for i in 1...5 {
+            userData.append(LoginUserItemModel(name: "2_0\(i)"))
+        }
+        
+        //设置进入后显示默认账号
+        let firstIndex = IndexPath(item: 0, section: 0)
+        let firstItem = collectionView.item(at: firstIndex)
+        itemRect = view.convert((firstItem?.view.frame)!, from: collectionView)
+        transitionItem.frame = itemRect!
+        transitionItem.image = NSImage(named: userData[firstIndex.item].name)
+        collectionView.isHidden = true
+        view.addSubview(transitionItem)
+        
+        var temp = NSMakeRect(self.view.frame.width / 2, 0, 100, 100)
+        temp = view.convert(temp, to: collectionView)
+        transitionItem.frame = temp
+        
+        //显示状态按钮
+        appendStatusButton()
+        
     }
     
     override func viewDidAppear() {
@@ -77,7 +112,6 @@ class ViewController: NSViewController {
                 self.view.window?.addChildWindow(self.settingWindow, ordered: .below)
             }
         }
-        
         
     }
 
@@ -99,7 +133,6 @@ class ViewController: NSViewController {
     @IBAction func onArrowClick(_ sender: NSButton) {
         
         sound?.play()
-        
         NSAnimationContext.runAnimationGroup { (context) in
             context.duration = 0.45
             context.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
@@ -108,7 +141,7 @@ class ViewController: NSViewController {
                 
                 view.window?.addChildWindow(settingWindow, ordered: .below)
             } else {
-                //            view.window?.removeChildWindow(settingWindow!)
+//                view.window?.removeChildWindow(settingWindow)
                 settingWindow.animator().setFrame(NSMakeRect((view.window?.frame.origin.x)!, (view.window?.frame.origin.y)! + 22, (view.window?.frame.size.width)!, 0), display: false)
             }
         }
@@ -137,17 +170,23 @@ extension ViewController: NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.init("LoginUserItem"), for: indexPath) as! LoginUserItem
-        item.model = LoginUserItemModel(name: userData[indexPath.item])
-        item.avatarClick = { [weak self] sender in
+        item.model = userData[indexPath.item]
+        
+        //闭包传值
+        item.avatarClick = { [weak self] in
             self?.didClickAvatarItem(item, with: indexPath)
         }
+        
+        //代理协议
+        item.delegate = self
+        
         return item
     }
     
     func didClickAvatarItem(_ item: LoginUserItem, with indexPath: IndexPath) {
         itemRect = view.convert(item.view.frame, from: collectionView)
         transitionItem.frame = itemRect!
-        transitionItem.image = NSImage(named: userData[indexPath.item])
+        transitionItem.image = NSImage(named: userData[indexPath.item].name)
         collectionView.isHidden = true
         view.addSubview(transitionItem)
         
@@ -157,13 +196,16 @@ extension ViewController: NSCollectionViewDataSource {
             var temp = NSMakeRect(self.view.frame.width / 2, 0, 100, 100)
             temp = view.convert(temp, to: self.collectionView)
             self.transitionItem.animator().frame = temp
-        }, completionHandler: nil)
+        }, completionHandler: {
+            self.appendStatusButton()
+        })
     }
     
     @objc func handleTransition(button: LoginAvatarButton) {
         NSAnimationContext.runAnimationGroup ({ (context) in
             context.duration = 0.5
             context.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+            self.statusButton.isHidden = true
             self.transitionItem.animator().frame = self.itemRect!
         }) {
             self.collectionView.isHidden = false
@@ -171,6 +213,29 @@ extension ViewController: NSCollectionViewDataSource {
         }
     }
     
+    func appendStatusButton() {
+        self.statusButton.isHidden = false
+        self.view.addSubview(self.statusButton)
+        self.statusButton.bottomAnchor.constraint(equalTo: self.transitionItem.bottomAnchor, constant: self.statusButtonHeight / 2).isActive = true
+        self.statusButton.heightAnchor.constraint(equalToConstant: self.statusButtonHeight).isActive = true
+        self.statusButton.widthAnchor.constraint(equalToConstant: self.statusButtonHeight).isActive = true
+        self.statusButton.centerXAnchor.constraint(equalTo: self.transitionItem.centerXAnchor).isActive = true
+    }
     
+    @objc func changeStatusButton(button: NSButton) {
+        button.image = button.image == #imageLiteral(resourceName: "online_status") ? #imageLiteral(resourceName: "hide_status") : #imageLiteral(resourceName: "online_status")
+    }
+    
+    
+}
+
+extension ViewController: LoginUserItemDelegate {
+    
+    func removeUserItem(_ item: LoginUserItem) {
+        let indexPath = collectionView.indexPath(for: item)
+        collectionView.deleteItems(at: [indexPath!])
+        userData.remove(at: indexPath!.item)
+        collectionView.reloadData()
+    }
     
 }

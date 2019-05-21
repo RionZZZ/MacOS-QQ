@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="LoginUserItem" customModule="MyQQ" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="qnx-pv-EJn" id="rQI-jc-McY"/>
                 <outlet property="imageButton" destination="dfr-pc-KL1" id="pYP-zi-TnU"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -27,14 +28,33 @@
                         <action selector="onAvatarClick:" target="-2" id="yCo-zm-RUP"/>
                     </connections>
                 </button>
+                <button hidden="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnx-pv-EJn">
+                    <rect key="frame" x="0.0" y="26" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="qMc-yF-NWd"/>
+                        <constraint firstAttribute="height" constant="14" id="xcj-Xt-98S"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="close" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Cb1-rx-B7T">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onCloseClick:" target="-2" id="Rq0-E5-fBy"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="dfr-pc-KL1" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="1oI-Nh-JwY"/>
                 <constraint firstItem="dfr-pc-KL1" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ECf-Kz-jY0"/>
                 <constraint firstAttribute="trailing" secondItem="dfr-pc-KL1" secondAttribute="trailing" id="GCM-Op-Ovb"/>
+                <constraint firstItem="qnx-pv-EJn" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="Jxc-rM-lVU"/>
+                <constraint firstItem="qnx-pv-EJn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="M3Q-Z7-KaE"/>
                 <constraint firstAttribute="bottom" secondItem="dfr-pc-KL1" secondAttribute="bottom" id="Qsf-zr-cuP"/>
             </constraints>
         </customView>
         <customObject id="YEB-8L-jRC" customClass="LoginUserItem" customModule="MyQQ" customModuleProvider="target"/>
     </objects>
+    <resources>
+        <image name="close" width="28" height="28"/>
+    </resources>
 </document>
