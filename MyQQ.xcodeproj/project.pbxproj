@@ -21,6 +21,9 @@
 		AE2C68712292EBB00031678C /* LoginUserItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE2C686F2292EBB00031678C /* LoginUserItem.xib */; };
 		AE2C68732292EC490031678C /* LoginUserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C68722292EC490031678C /* LoginUserItemModel.swift */; };
 		AE77BAD22293CD0F009A456A /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BAD12293CD0F009A456A /* StatusButton.swift */; };
+		AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADA2293EA6D009A456A /* MainViewController.swift */; };
+		AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADC2293F304009A456A /* MainWindowController.swift */; };
+		AE77BADF2293FDA2009A456A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADE2293FDA2009A456A /* SearchTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		AE2C686F2292EBB00031678C /* LoginUserItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginUserItem.xib; sourceTree = "<group>"; };
 		AE2C68722292EC490031678C /* LoginUserItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserItemModel.swift; sourceTree = "<group>"; };
 		AE77BAD12293CD0F009A456A /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
+		AE77BADA2293EA6D009A456A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE77BADC2293F304009A456A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		AE77BADE2293FDA2009A456A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,16 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				AE06991D22850D9300E53797 /* AppDelegate.swift */,
-				AE06991F22850D9300E53797 /* ViewController.swift */,
-				AE77BAD12293CD0F009A456A /* StatusButton.swift */,
-				AE2C686822925C730031678C /* SettingViewController.swift */,
-				AE06992D2285134800E53797 /* LoginWindowController.swift */,
-				AE06992F22851B3700E53797 /* LoginAvatarButton.swift */,
-				AE2C68642292439B0031678C /* LoginAccountField.swift */,
-				AE2C68662292456F0031678C /* LoginPwdField.swift */,
-				AE2C686E2292EBB00031678C /* LoginUserItem.swift */,
-				AE2C686F2292EBB00031678C /* LoginUserItem.xib */,
-				AE2C68722292EC490031678C /* LoginUserItemModel.swift */,
+				AE77BAD72293E988009A456A /* Login */,
+				AE77BAD82293EA2B009A456A /* Main */,
 				AE06992122850D9400E53797 /* Assets.xcassets */,
 				AE06992322850D9400E53797 /* Main.storyboard */,
 				AE06992622850D9400E53797 /* Info.plist */,
@@ -91,6 +89,65 @@
 				AE2C686C2292AE320031678C /* 登录状态切换的音效.mp3 */,
 			);
 			path = MyQQ;
+			sourceTree = "<group>";
+		};
+		AE77BAD32293E924009A456A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE06991F22850D9300E53797 /* ViewController.swift */,
+				AE2C686822925C730031678C /* SettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE77BAD42293E94E009A456A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE77BAD12293CD0F009A456A /* StatusButton.swift */,
+				AE06992F22851B3700E53797 /* LoginAvatarButton.swift */,
+				AE2C68642292439B0031678C /* LoginAccountField.swift */,
+				AE2C68662292456F0031678C /* LoginPwdField.swift */,
+				AE2C686E2292EBB00031678C /* LoginUserItem.swift */,
+				AE2C686F2292EBB00031678C /* LoginUserItem.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE77BAD52293E960009A456A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE2C68722292EC490031678C /* LoginUserItemModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE77BAD62293E976009A456A /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				AE06992D2285134800E53797 /* LoginWindowController.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		AE77BAD72293E988009A456A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AE77BAD32293E924009A456A /* Controller */,
+				AE77BAD42293E94E009A456A /* View */,
+				AE77BAD62293E976009A456A /* Window */,
+				AE77BAD52293E960009A456A /* Model */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AE77BAD82293EA2B009A456A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AE77BADA2293EA6D009A456A /* MainViewController.swift */,
+				AE77BADC2293F304009A456A /* MainWindowController.swift */,
+				AE77BADE2293FDA2009A456A /* SearchTextField.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
+				AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */,
+				AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */,
 				AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */,
 				AE2C68652292439B0031678C /* LoginAccountField.swift in Sources */,
 				AE77BAD22293CD0F009A456A /* StatusButton.swift in Sources */,
@@ -183,6 +242,7 @@
 				AE2C68732292EC490031678C /* LoginUserItemModel.swift in Sources */,
 				AE2C686922925C730031678C /* SettingViewController.swift in Sources */,
 				AE06991E22850D9300E53797 /* AppDelegate.swift in Sources */,
+				AE77BADF2293FDA2009A456A /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

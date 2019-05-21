@@ -729,7 +729,7 @@
                                     <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-Jj-Ege" customClass="LoginAccountField" customModule="MyQQ" customModuleProvider="target">
                                         <rect key="frame" x="34" y="107" width="180" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="输入账号" drawsBackground="YES" id="knG-1W-7Lu">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" title="1" placeholderString="输入账号" drawsBackground="YES" id="knG-1W-7Lu">
                                             <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="xiQ-Ke-uaz"/>
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -739,7 +739,7 @@
                                     <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0d-qE-8QJ" customClass="LoginPwdField" customModule="MyQQ" customModuleProvider="target">
                                         <rect key="frame" x="34" y="63" width="160" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="输入密码" drawsBackground="YES" usesSingleLineMode="YES" id="d8f-1d-ck3">
+                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" title="1" placeholderString="输入密码" drawsBackground="YES" usesSingleLineMode="YES" id="d8f-1d-ck3">
                                             <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -764,7 +764,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="onLoginClick:" target="XfG-lQ-9wD" id="dij-dS-0MG"/>
+                                            <segue destination="JgY-Sp-tau" kind="show" identifier="pushToMain" id="FKh-YD-P3z"/>
                                         </connections>
                                     </button>
                                     <button translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-5s-c0A">
@@ -924,7 +924,126 @@
                     </constraints>
                 </customView>
             </objects>
-            <point key="canvasLocation" x="405" y="760"/>
+            <point key="canvasLocation" x="75" y="704"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="sUX-nZ-BsK">
+            <objects>
+                <windowController id="JgY-Sp-tau" customClass="MainWindowController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="cK7-Q5-5O7">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="JgY-Sp-tau" id="Zjq-Jd-QWk"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="qiI-F8-x4u" kind="relationship" relationship="window.shadowedContentViewController" id="QCP-uF-CUI"/>
+                    </connections>
+                </windowController>
+                <customObject id="UWP-8E-fKz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="698"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="v0Z-MY-g2p">
+            <objects>
+                <viewController id="qiI-F8-x4u" customClass="MainViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="nK8-qu-wYg">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tde-xG-rJu">
+                                <rect key="frame" x="0.0" y="214" width="480" height="56"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-d4-GyB">
+                                        <rect key="frame" x="168" y="16" width="145" height="25"/>
+                                        <subviews>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="5LI-Be-XDp">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="ijd-2h-7gw"/>
+                                                    <constraint firstAttribute="width" constant="25" id="ocI-ba-Seb"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="message_gray" imagePosition="only" alignment="center" alternateImage="message_blue" imageScaling="proportionallyUpOrDown" inset="2" id="T9x-Id-cF4">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="XeF-I4-qQy">
+                                                <rect key="frame" x="60" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="sGO-1i-RSF"/>
+                                                    <constraint firstAttribute="height" constant="25" id="zMD-6I-aLG"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="friend_gray" imagePosition="only" alignment="center" alternateImage="friend_blue" imageScaling="proportionallyUpOrDown" inset="2" id="ujX-Nf-fus">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </button>
+                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="1QQ-Xo-VGy">
+                                                <rect key="frame" x="120" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="oJX-00-dl4"/>
+                                                    <constraint firstAttribute="height" constant="25" id="x7z-Nz-5Tj"/>
+                                                </constraints>
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="application_gray" imagePosition="only" alignment="center" alternateImage="application_blue" imageScaling="proportionallyUpOrDown" inset="2" id="NGA-UN-A6m">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                    <string key="keyEquivalent">r</string>
+                                                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-Jn-Jyz" customClass="SearchTextField" customModule="MyQQ" customModuleProvider="target">
+                                        <rect key="frame" x="75" y="16" width="124" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="WmH-up-9ri"/>
+                                            <constraint firstAttribute="width" constant="124" id="wYa-eB-nrl"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" focusRingType="none" bezelStyle="round" id="yUm-Ct-5UQ">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="c3P-Jn-Jyz" firstAttribute="leading" secondItem="Tde-xG-rJu" secondAttribute="leading" constant="75" id="KA1-F4-04I"/>
+                                    <constraint firstItem="EHJ-d4-GyB" firstAttribute="centerY" secondItem="Tde-xG-rJu" secondAttribute="centerY" id="R2Y-JN-tbN"/>
+                                    <constraint firstItem="EHJ-d4-GyB" firstAttribute="centerX" secondItem="Tde-xG-rJu" secondAttribute="centerX" id="fbT-w3-XSE"/>
+                                    <constraint firstAttribute="height" constant="56" id="hkR-1W-PQr"/>
+                                    <constraint firstItem="c3P-Jn-Jyz" firstAttribute="centerY" secondItem="Tde-xG-rJu" secondAttribute="centerY" id="xDO-wt-okP"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tde-xG-rJu" secondAttribute="trailing" id="23x-FF-sb2"/>
+                            <constraint firstItem="Tde-xG-rJu" firstAttribute="leading" secondItem="nK8-qu-wYg" secondAttribute="leading" id="F7C-tv-bC6"/>
+                            <constraint firstItem="Tde-xG-rJu" firstAttribute="top" secondItem="nK8-qu-wYg" secondAttribute="top" id="cXC-Nb-d9y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchField" destination="c3P-Jn-Jyz" id="Qwz-fa-082"/>
+                        <outlet property="toolBar" destination="Tde-xG-rJu" id="Cib-Py-vND"/>
+                    </connections>
+                </viewController>
+                <customObject id="SYY-vy-ho3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="569" y="1131"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Z4j-bM-wAJ">
@@ -971,15 +1090,21 @@
                 </viewController>
                 <customObject id="lq5-hC-9gH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="914"/>
+            <point key="canvasLocation" x="74" y="963"/>
         </scene>
     </scenes>
     <resources>
         <image name="3_01" width="224" height="224"/>
         <image name="3_02" width="10" height="20"/>
         <image name="Login_down" width="26" height="15"/>
+        <image name="application_blue" width="46" height="46"/>
+        <image name="application_gray" width="46" height="46"/>
         <image name="close" width="28" height="28"/>
         <image name="enterButton" width="48" height="48"/>
+        <image name="friend_blue" width="48" height="48"/>
+        <image name="friend_gray" width="48" height="48"/>
+        <image name="message_blue" width="48" height="48"/>
+        <image name="message_gray" width="48" height="48"/>
         <image name="qrcode_image" width="30" height="30"/>
     </resources>
 </document>

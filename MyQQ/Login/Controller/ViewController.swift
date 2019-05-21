@@ -62,7 +62,7 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(forName: NSText.didChangeNotification, object: nil, queue: OperationQueue.main) { (notifi) in
-                self.loginButton.isEnabled = !self.accountField.stringValue.isEmpty && !self.pwdField.stringValue.isEmpty
+            self.checkLoginType()
         }
         
         //qrView背景色修改，必须先将wantsLayer设置为true
@@ -76,6 +76,8 @@ class ViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
+        
+        checkLoginType()
         
         //赋值数据
         for i in 1...5 {
@@ -120,6 +122,16 @@ class ViewController: NSViewController {
             
         }
     }
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pushToMain" {
+            view.window?.close()
+        }
+    }
+    
+    func checkLoginType() {
+        loginButton.isEnabled = !accountField.stringValue.isEmpty && !pwdField.stringValue.isEmpty
+    }
 
     @IBAction func onCloseClick(_ sender: Any) {
 //        NSApplication.shared.terminate(sender)
@@ -127,8 +139,9 @@ class ViewController: NSViewController {
         NSApp.terminate(sender)
     }
     
-    @IBAction func onLoginClick(_ sender: NSButton) {
-    }
+//    @IBAction func onLoginClick(_ sender: NSButton) {
+//        view.window?.close()
+//    }
     
     @IBAction func onArrowClick(_ sender: NSButton) {
         
