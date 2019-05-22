@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application View Controller-->
+        <scene sceneID="cIp-Oh-N7k">
+            <objects>
+                <viewController storyboardIdentifier="application" id="7h6-jR-KHz" customClass="ApplicationViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Zxh-0d-MVa">
+                        <rect key="frame" x="0.0" y="0.0" width="675" height="411"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="a2D-je-h56">
+                                <rect key="frame" x="0.0" y="291" width="675" height="120"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkY-XE-qr9">
+                                        <rect key="frame" x="40" y="37" width="118" height="46"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="r0e-aJ-af0">
+                                                <rect key="frame" x="-2" y="19" width="101" height="27"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="5月22日" id="XnU-fa-7ft">
+                                                    <font key="font" size="25" name=".PingFangSC-Regular"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wqf-8p-O2R">
+                                                <rect key="frame" x="-2" y="0.0" width="122" height="19"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="星期三 四月十八 " id="VLi-CI-amY">
+                                                    <font key="font" size="15" name=".PingFangSC-Regular"/>
+                                                    <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ywk-0P-Hah">
+                                        <rect key="frame" x="257" y="32" width="388" height="56"/>
+                                        <subviews>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1O-hI-46d" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1001" translatesAutoresizingMaskIntoConstraints="NO" id="Sch-RH-c7u">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="h2d-eb-kRE"/>
+                                                            <constraint firstAttribute="height" constant="30" id="mhN-Pn-K56"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="001" imagePosition="overlaps" alignment="center" alternateImage="001_1" imageScaling="proportionallyUpOrDown" inset="2" id="i4X-2D-l5p">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="IgF-cF-ApC"/>
+                                                            <segue destination="amg-fM-S5r" kind="show" id="T23-Z1-EGo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BR7-C0-C6f">
+                                                        <rect key="frame" x="-2" y="0.0" width="62" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="在线文档" id="ugf-st-sOT">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkC-uk-1jG" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="66" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1002" translatesAutoresizingMaskIntoConstraints="NO" id="Yg7-eT-QFJ">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="JX2-QH-IJL"/>
+                                                            <constraint firstAttribute="width" constant="30" id="Sdg-yI-K4N"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="002" imagePosition="overlaps" alignment="center" alternateImage="002_1" imageScaling="proportionallyUpOrDown" inset="2" id="k5h-Oh-DEK">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="r6h-KZ-1qT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QTT-xQ-vdl">
+                                                        <rect key="frame" x="13" y="0.0" width="33" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="文件" id="gQA-ig-2j4">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-f4-rKA" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="132" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1003" translatesAutoresizingMaskIntoConstraints="NO" id="Fvd-CR-cmh">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="b0h-A7-yyN"/>
+                                                            <constraint firstAttribute="height" constant="30" id="gNe-9F-sHs"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="003" imagePosition="overlaps" alignment="center" alternateImage="003_1" imageScaling="proportionallyUpOrDown" inset="2" id="w90-2T-8i9">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="O1z-uE-VXB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zaF-d2-a9M">
+                                                        <rect key="frame" x="13" y="0.0" width="33" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="收藏" id="F26-2O-7HD">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gwR-hV-jCQ" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="198" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1004" translatesAutoresizingMaskIntoConstraints="NO" id="8ts-1V-X71">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="eqt-4X-kbY"/>
+                                                            <constraint firstAttribute="height" constant="30" id="kW2-lf-Xj3"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="004" imagePosition="overlaps" alignment="center" alternateImage="004_1" imageScaling="proportionallyUpOrDown" inset="2" id="ocD-FI-WfR">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="A7D-gL-n1W"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kcc-Cn-5JF">
+                                                        <rect key="frame" x="13" y="0.0" width="33" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="微云" id="SN3-Og-ZpZ">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWC-5T-gk3" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="264" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1005" translatesAutoresizingMaskIntoConstraints="NO" id="pfY-GK-Wyh">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="Hiq-zS-hDG"/>
+                                                            <constraint firstAttribute="height" constant="30" id="Qzc-xm-zrt"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="005" imagePosition="overlaps" alignment="center" alternateImage="005_1" imageScaling="proportionallyUpOrDown" inset="2" id="I6d-rl-jfh">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="vKP-ow-0nl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N1D-Hf-uX8">
+                                                        <rect key="frame" x="13" y="0.0" width="33" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="反馈" id="OSo-Bi-he3">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                            <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28g-Ic-Vh6" customClass="IconsStackView" customModule="MyQQ" customModuleProvider="target">
+                                                <rect key="frame" x="330" y="0.0" width="58" height="56"/>
+                                                <subviews>
+                                                    <button tag="1006" translatesAutoresizingMaskIntoConstraints="NO" id="A0F-wK-Qa1">
+                                                        <rect key="frame" x="14" y="26" width="30" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="KWh-N6-sl2"/>
+                                                            <constraint firstAttribute="height" constant="30" id="rSw-lo-f63"/>
+                                                        </constraints>
+                                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="006" imagePosition="overlaps" alignment="center" alternateImage="006_1" imageScaling="proportionallyUpOrDown" inset="2" id="lLG-Yl-HBb">
+                                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                            <font key="font" metaFont="system"/>
+                                                        </buttonCell>
+                                                        <connections>
+                                                            <action selector="onIconClick:" target="7h6-jR-KHz" id="4x5-zH-RYs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ngH-GT-9qe">
+                                                        <rect key="frame" x="13" y="0.0" width="33" height="18"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="设置" id="C5k-xL-ceT">
+                                                            <font key="font" size="14" name=".PingFangSC-Regular"/>
+                                                            <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="eG8-mR-Rwb">
+                                        <rect key="frame" x="20" y="-2" width="635" height="5"/>
+                                    </box>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MkY-XE-qr9" firstAttribute="leading" secondItem="a2D-je-h56" secondAttribute="leading" constant="40" id="ATf-Zi-bkj"/>
+                                    <constraint firstItem="MkY-XE-qr9" firstAttribute="centerY" secondItem="a2D-je-h56" secondAttribute="centerY" id="Nm7-iN-weo"/>
+                                    <constraint firstItem="ywk-0P-Hah" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MkY-XE-qr9" secondAttribute="trailing" constant="20" id="VQB-ZU-MOG"/>
+                                    <constraint firstAttribute="bottom" secondItem="eG8-mR-Rwb" secondAttribute="bottom" id="a2K-nP-hFX"/>
+                                    <constraint firstAttribute="trailing" secondItem="eG8-mR-Rwb" secondAttribute="trailing" constant="20" id="aei-fP-5aj"/>
+                                    <constraint firstAttribute="height" constant="120" id="mVV-pm-cyx"/>
+                                    <constraint firstItem="eG8-mR-Rwb" firstAttribute="leading" secondItem="a2D-je-h56" secondAttribute="leading" constant="20" id="mmH-zY-xKn"/>
+                                    <constraint firstItem="ywk-0P-Hah" firstAttribute="centerY" secondItem="a2D-je-h56" secondAttribute="centerY" id="sWl-2a-FfI"/>
+                                    <constraint firstAttribute="trailing" secondItem="ywk-0P-Hah" secondAttribute="trailing" constant="30" id="wU6-0Z-uE5"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="a2D-je-h56" firstAttribute="top" secondItem="Zxh-0d-MVa" secondAttribute="top" id="ORR-6B-sag"/>
+                            <constraint firstItem="a2D-je-h56" firstAttribute="leading" secondItem="Zxh-0d-MVa" secondAttribute="leading" id="ZVq-dE-Snr"/>
+                            <constraint firstAttribute="trailing" secondItem="a2D-je-h56" secondAttribute="trailing" id="k1b-6y-Jci"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="rZ8-IM-6De" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990.5" y="1694.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="ks4-fE-eM3">
+            <objects>
+                <windowController id="amg-fM-S5r" sceneMemberID="viewController">
+                    <window key="window" title="在线文档" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="9m2-Xt-QBv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="amg-fM-S5r" id="8TK-Bc-V2c"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="jTw-QA-t03" kind="relationship" relationship="window.shadowedContentViewController" id="H9t-OT-lTZ"/>
+                    </connections>
+                </windowController>
+                <customObject id="511-gS-1RU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="2236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NAY-iu-xX9">
+            <objects>
+                <viewController id="jTw-QA-t03" sceneMemberID="viewController">
+                    <view key="view" id="sCc-rF-GUg">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="6HU-kU-YGw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="2013"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="001" width="50" height="52"/>
+        <image name="001_1" width="50" height="52"/>
+        <image name="002" width="48" height="52"/>
+        <image name="002_1" width="48" height="52"/>
+        <image name="003" width="47" height="52"/>
+        <image name="003_1" width="47" height="52"/>
+        <image name="004" width="60" height="52"/>
+        <image name="004_1" width="60" height="52"/>
+        <image name="005" width="48" height="52"/>
+        <image name="005_1" width="48" height="52"/>
+        <image name="006" width="44" height="51"/>
+        <image name="006_1" width="44" height="51"/>
+    </resources>
+</document>

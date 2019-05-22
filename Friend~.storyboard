@@ -1111,29 +1111,61 @@
             </objects>
             <point key="canvasLocation" x="74" y="963"/>
         </scene>
+        <!--Friend View Controller-->
+        <scene sceneID="g0g-kE-X8R">
+            <objects>
+                <viewController storyboardIdentifier="friend" id="Ftj-88-ryx" customClass="FriendViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="CUR-xk-lmb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSe-xC-K2q">
+                                <rect key="frame" x="172" y="227" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Friend" id="gFx-aT-XQy">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="58f-Yb-fb7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="1799"/>
+        </scene>
+        <!--Application View Controller-->
+        <scene sceneID="cIp-Oh-N7k">
+            <objects>
+                <viewController storyboardIdentifier="application" id="7h6-jR-KHz" customClass="ApplicationViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Zxh-0d-MVa">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-tF-RAx">
+                                <rect key="frame" x="233" y="136" width="72" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Application" id="bW9-Ej-YVo">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="rZ8-IM-6De" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1639"/>
+        </scene>
         <!--message-->
         <scene sceneID="m2W-Gl-uae">
             <objects>
                 <controllerPlaceholder storyboardIdentifier="message" storyboardName="Message" referencedIdentifier="message" id="OHK-mI-Zfp" sceneMemberID="viewController"/>
                 <customObject id="7d2-aj-IPe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="1401"/>
-        </scene>
-        <!--friend-->
-        <scene sceneID="qpC-Ve-J8y">
-            <objects>
-                <controllerPlaceholder storyboardIdentifier="friend" storyboardName="Friend" referencedIdentifier="friend" id="tLG-UV-NbW" sceneMemberID="viewController"/>
-                <customObject id="gEu-5s-HfM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="401" y="1401"/>
-        </scene>
-        <!--application-->
-        <scene sceneID="RSk-Z1-1RO">
-            <objects>
-                <controllerPlaceholder storyboardIdentifier="application" storyboardName="Application" referencedIdentifier="application" id="Z9S-T4-0tG" sceneMemberID="viewController"/>
-                <customObject id="yjN-Iy-4aZ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="520" y="1401"/>
+            <point key="canvasLocation" x="262" y="1543"/>
         </scene>
     </scenes>
     <resources>

@@ -28,6 +28,10 @@
 		AED5DB172294F1EF00F65349 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB162294F1EF00F65349 /* FriendViewController.swift */; };
 		AED5DB192294F20000F65349 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB182294F20000F65349 /* ApplicationViewController.swift */; };
 		AED5DB1B2294FEFD00F65349 /* SBWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */; };
+		AED5DB1E22951A4C00F65349 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB1C22951A4C00F65349 /* Message.storyboard */; };
+		AED5DB2022951A7A00F65349 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB1F22951A7A00F65349 /* Friend.storyboard */; };
+		AED5DB2322951A8700F65349 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB2122951A8700F65349 /* Application.storyboard */; };
+		AED5DB282295202D00F65349 /* IconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB272295202D00F65349 /* IconsStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +59,10 @@
 		AED5DB162294F1EF00F65349 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		AED5DB182294F20000F65349 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
 		AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBWindowController.swift; sourceTree = "<group>"; };
+		AED5DB1D22951A4C00F65349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MyQQ/Base.lproj/Message.storyboard; sourceTree = "<group>"; };
+		AED5DB1F22951A7A00F65349 /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
+		AED5DB2222951A8700F65349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MyQQ/Base.lproj/Application.storyboard; sourceTree = "<group>"; };
+		AED5DB272295202D00F65349 /* IconsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,15 +159,43 @@
 		AE77BAD82293EA2B009A456A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */,
-				AE77BADA2293EA6D009A456A /* MainViewController.swift */,
-				AE77BADC2293F304009A456A /* MainWindowController.swift */,
-				AE77BADE2293FDA2009A456A /* SearchTextField.swift */,
-				AED5DB142294F1DE00F65349 /* MessageViewController.swift */,
-				AED5DB162294F1EF00F65349 /* FriendViewController.swift */,
-				AED5DB182294F20000F65349 /* ApplicationViewController.swift */,
+				AED5DB2422951AF100F65349 /* Controller */,
+				AED5DB2622951B1000F65349 /* View */,
+				AED5DB2522951B0000F65349 /* Window */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		AED5DB2422951AF100F65349 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE77BADA2293EA6D009A456A /* MainViewController.swift */,
+				AED5DB142294F1DE00F65349 /* MessageViewController.swift */,
+				AED5DB1C22951A4C00F65349 /* Message.storyboard */,
+				AED5DB162294F1EF00F65349 /* FriendViewController.swift */,
+				AED5DB1F22951A7A00F65349 /* Friend.storyboard */,
+				AED5DB182294F20000F65349 /* ApplicationViewController.swift */,
+				AED5DB2122951A8700F65349 /* Application.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AED5DB2522951B0000F65349 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */,
+				AE77BADC2293F304009A456A /* MainWindowController.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		AED5DB2622951B1000F65349 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE77BADE2293FDA2009A456A /* SearchTextField.swift */,
+				AED5DB272295202D00F65349 /* IconsStackView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +264,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED5DB2022951A7A00F65349 /* Friend.storyboard in Resources */,
 				AE06992222850D9400E53797 /* Assets.xcassets in Resources */,
 				AE2C68712292EBB00031678C /* LoginUserItem.xib in Resources */,
+				AED5DB2322951A8700F65349 /* Application.storyboard in Resources */,
+				AED5DB1E22951A4C00F65349 /* Message.storyboard in Resources */,
 				AE06992522850D9400E53797 /* Main.storyboard in Resources */,
 				AE2C686D2292AE320031678C /* 登录状态切换的音效.mp3 in Resources */,
 			);
@@ -242,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED5DB282295202D00F65349 /* IconsStackView.swift in Sources */,
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
 				AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */,
 				AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */,
@@ -271,6 +311,22 @@
 				AE06992422850D9400E53797 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AED5DB1C22951A4C00F65349 /* Message.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED5DB1D22951A4C00F65349 /* Base */,
+			);
+			name = Message.storyboard;
+			sourceTree = "<group>";
+		};
+		AED5DB2122951A8700F65349 /* Application.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED5DB2222951A8700F65349 /* Base */,
+			);
+			name = Application.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

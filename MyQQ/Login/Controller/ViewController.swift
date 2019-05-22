@@ -123,6 +123,7 @@ class ViewController: NSViewController {
         }
     }
     
+    //点击登录按钮切换主窗口
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if segue.identifier == "pushToMain" {
             view.window?.close()
