@@ -952,27 +952,33 @@
             <objects>
                 <viewController id="qiI-F8-x4u" customClass="MainViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nK8-qu-wYg">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tde-xG-rJu">
-                                <rect key="frame" x="0.0" y="214" width="480" height="56"/>
+                                <rect key="frame" x="0.0" y="394" width="700" height="56"/>
                                 <subviews>
+                                    <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-wL-1F5">
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="56"/>
+                                    </visualEffectView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="35" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHJ-d4-GyB">
-                                        <rect key="frame" x="168" y="16" width="145" height="25"/>
+                                        <rect key="frame" x="278" y="16" width="145" height="25"/>
                                         <subviews>
-                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="5LI-Be-XDp">
+                                            <button tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="5LI-Be-XDp">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="ijd-2h-7gw"/>
                                                     <constraint firstAttribute="width" constant="25" id="ocI-ba-Seb"/>
                                                 </constraints>
-                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="message_gray" imagePosition="only" alignment="center" alternateImage="message_blue" imageScaling="proportionallyUpOrDown" inset="2" id="T9x-Id-cF4">
+                                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="message_gray" imagePosition="only" alignment="center" alternateImage="message_blue" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="T9x-Id-cF4">
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="onTabButtonClick:" target="qiI-F8-x4u" id="TKl-IR-wfG"/>
+                                                </connections>
                                             </button>
-                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="XeF-I4-qQy">
+                                            <button tag="102" translatesAutoresizingMaskIntoConstraints="NO" id="XeF-I4-qQy">
                                                 <rect key="frame" x="60" y="0.0" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="sGO-1i-RSF"/>
@@ -982,8 +988,11 @@
                                                     <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="onTabButtonClick:" target="qiI-F8-x4u" id="vVd-gB-aPb"/>
+                                                </connections>
                                             </button>
-                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="1QQ-Xo-VGy">
+                                            <button tag="103" translatesAutoresizingMaskIntoConstraints="NO" id="1QQ-Xo-VGy">
                                                 <rect key="frame" x="120" y="0.0" width="25" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="oJX-00-dl4"/>
@@ -995,6 +1004,9 @@
                                                     <string key="keyEquivalent">r</string>
                                                     <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                                 </buttonCell>
+                                                <connections>
+                                                    <action selector="onTabButtonClick:" target="qiI-F8-x4u" id="pIZ-eJ-6wI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <visibilityPriorities>
@@ -1022,10 +1034,14 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Scc-wL-1F5" secondAttribute="trailing" id="EDE-le-hNm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Scc-wL-1F5" secondAttribute="bottom" id="EPC-mN-3uH"/>
                                     <constraint firstItem="c3P-Jn-Jyz" firstAttribute="leading" secondItem="Tde-xG-rJu" secondAttribute="leading" constant="75" id="KA1-F4-04I"/>
                                     <constraint firstItem="EHJ-d4-GyB" firstAttribute="centerY" secondItem="Tde-xG-rJu" secondAttribute="centerY" id="R2Y-JN-tbN"/>
                                     <constraint firstItem="EHJ-d4-GyB" firstAttribute="centerX" secondItem="Tde-xG-rJu" secondAttribute="centerX" id="fbT-w3-XSE"/>
+                                    <constraint firstItem="Scc-wL-1F5" firstAttribute="leading" secondItem="Tde-xG-rJu" secondAttribute="leading" id="gXm-1J-ZMV"/>
                                     <constraint firstAttribute="height" constant="56" id="hkR-1W-PQr"/>
+                                    <constraint firstItem="Scc-wL-1F5" firstAttribute="top" secondItem="Tde-xG-rJu" secondAttribute="top" id="pbz-QB-6WS"/>
                                     <constraint firstItem="c3P-Jn-Jyz" firstAttribute="centerY" secondItem="Tde-xG-rJu" secondAttribute="centerY" id="xDO-wt-okP"/>
                                 </constraints>
                             </customView>
@@ -1037,6 +1053,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="applicationButton" destination="1QQ-Xo-VGy" id="feb-ik-Jhi"/>
+                        <outlet property="friendButton" destination="XeF-I4-qQy" id="7WC-aG-pdy"/>
+                        <outlet property="messageButton" destination="5LI-Be-XDp" id="DGM-KT-hzY"/>
                         <outlet property="searchField" destination="c3P-Jn-Jyz" id="Qwz-fa-082"/>
                         <outlet property="toolBar" destination="Tde-xG-rJu" id="Cib-Py-vND"/>
                     </connections>
@@ -1044,6 +1063,30 @@
                 <customObject id="SYY-vy-ho3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="569" y="1131"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="mzw-vJ-IVN">
+            <objects>
+                <viewController storyboardIdentifier="message" id="xrg-NB-8IY" customClass="MessageViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="VnN-YP-K7V">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1T-N9-EHD">
+                                <rect key="frame" x="89" y="169" width="59" height="38"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Message" id="e7d-Fb-zUj">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="T4W-kl-fs3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="1568"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Z4j-bM-wAJ">
@@ -1091,6 +1134,54 @@
                 <customObject id="lq5-hC-9gH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="74" y="963"/>
+        </scene>
+        <!--Friend View Controller-->
+        <scene sceneID="g0g-kE-X8R">
+            <objects>
+                <viewController storyboardIdentifier="friend" id="Ftj-88-ryx" customClass="FriendViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="CUR-xk-lmb">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TSe-xC-K2q">
+                                <rect key="frame" x="172" y="227" width="43" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Friend" id="gFx-aT-XQy">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="58f-Yb-fb7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="1799"/>
+        </scene>
+        <!--Application View Controller-->
+        <scene sceneID="cIp-Oh-N7k">
+            <objects>
+                <viewController storyboardIdentifier="application" id="7h6-jR-KHz" customClass="ApplicationViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Zxh-0d-MVa">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-tF-RAx">
+                                <rect key="frame" x="233" y="136" width="72" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Application" id="bW9-Ej-YVo">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="rZ8-IM-6De" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="1639"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,10 @@
 		AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADA2293EA6D009A456A /* MainViewController.swift */; };
 		AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADC2293F304009A456A /* MainWindowController.swift */; };
 		AE77BADF2293FDA2009A456A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE77BADE2293FDA2009A456A /* SearchTextField.swift */; };
+		AED5DB152294F1DE00F65349 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB142294F1DE00F65349 /* MessageViewController.swift */; };
+		AED5DB172294F1EF00F65349 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB162294F1EF00F65349 /* FriendViewController.swift */; };
+		AED5DB192294F20000F65349 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB182294F20000F65349 /* ApplicationViewController.swift */; };
+		AED5DB1B2294FEFD00F65349 /* SBWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		AE77BADA2293EA6D009A456A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AE77BADC2293F304009A456A /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		AE77BADE2293FDA2009A456A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		AED5DB142294F1DE00F65349 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		AED5DB162294F1EF00F65349 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		AED5DB182294F20000F65349 /* ApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
+		AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +151,13 @@
 		AE77BAD82293EA2B009A456A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AED5DB1A2294FEFD00F65349 /* SBWindowController.swift */,
 				AE77BADA2293EA6D009A456A /* MainViewController.swift */,
 				AE77BADC2293F304009A456A /* MainWindowController.swift */,
 				AE77BADE2293FDA2009A456A /* SearchTextField.swift */,
+				AED5DB142294F1DE00F65349 /* MessageViewController.swift */,
+				AED5DB162294F1EF00F65349 /* FriendViewController.swift */,
+				AED5DB182294F20000F65349 /* ApplicationViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -236,11 +248,15 @@
 				AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */,
 				AE2C68652292439B0031678C /* LoginAccountField.swift in Sources */,
 				AE77BAD22293CD0F009A456A /* StatusButton.swift in Sources */,
+				AED5DB152294F1DE00F65349 /* MessageViewController.swift in Sources */,
 				AE06993022851B3700E53797 /* LoginAvatarButton.swift in Sources */,
 				AE2C68672292456F0031678C /* LoginPwdField.swift in Sources */,
+				AED5DB1B2294FEFD00F65349 /* SBWindowController.swift in Sources */,
+				AED5DB172294F1EF00F65349 /* FriendViewController.swift in Sources */,
 				AE2C68702292EBB00031678C /* LoginUserItem.swift in Sources */,
 				AE2C68732292EC490031678C /* LoginUserItemModel.swift in Sources */,
 				AE2C686922925C730031678C /* SettingViewController.swift in Sources */,
+				AED5DB192294F20000F65349 /* ApplicationViewController.swift in Sources */,
 				AE06991E22850D9300E53797 /* AppDelegate.swift in Sources */,
 				AE77BADF2293FDA2009A456A /* SearchTextField.swift in Sources */,
 			);
