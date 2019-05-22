@@ -952,11 +952,11 @@
             <objects>
                 <viewController id="qiI-F8-x4u" customClass="MainViewController" customModule="MyQQ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="nK8-qu-wYg">
-                        <rect key="frame" x="0.0" y="0.0" width="700" height="450"/>
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="520"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tde-xG-rJu">
-                                <rect key="frame" x="0.0" y="394" width="700" height="56"/>
+                                <rect key="frame" x="0.0" y="464" width="700" height="56"/>
                                 <subviews>
                                     <visualEffectView appearanceType="inheritedVibrantLight" blendingMode="behindWindow" material="underWindowBackground" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="Scc-wL-1F5">
                                         <rect key="frame" x="0.0" y="0.0" width="700" height="56"/>
@@ -1062,7 +1062,7 @@
                 </viewController>
                 <customObject id="SYY-vy-ho3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="1131"/>
+            <point key="canvasLocation" x="569" y="1116"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="Z4j-bM-wAJ">

@@ -32,6 +32,9 @@
 		AED5DB2022951A7A00F65349 /* Friend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB1F22951A7A00F65349 /* Friend.storyboard */; };
 		AED5DB2322951A8700F65349 /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB2122951A8700F65349 /* Application.storyboard */; };
 		AED5DB282295202D00F65349 /* IconsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB272295202D00F65349 /* IconsStackView.swift */; };
+		AED5DB2B22953EE000F65349 /* ApplicationCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */; };
+		AED5DB2C22953EE000F65349 /* ApplicationCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */; };
+		AED5DB2E229540C100F65349 /* ApplicationItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB2D229540C100F65349 /* ApplicationItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		AED5DB1F22951A7A00F65349 /* Friend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friend.storyboard; sourceTree = "<group>"; };
 		AED5DB2222951A8700F65349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MyQQ/Base.lproj/Application.storyboard; sourceTree = "<group>"; };
 		AED5DB272295202D00F65349 /* IconsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsStackView.swift; sourceTree = "<group>"; };
+		AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCollectionItem.swift; sourceTree = "<group>"; };
+		AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplicationCollectionItem.xib; sourceTree = "<group>"; };
+		AED5DB2D229540C100F65349 /* ApplicationItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationItemModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 				AED5DB2422951AF100F65349 /* Controller */,
 				AED5DB2622951B1000F65349 /* View */,
 				AED5DB2522951B0000F65349 /* Window */,
+				AED5DB2F229540C700F65349 /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -194,8 +201,18 @@
 			children = (
 				AE77BADE2293FDA2009A456A /* SearchTextField.swift */,
 				AED5DB272295202D00F65349 /* IconsStackView.swift */,
+				AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */,
+				AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AED5DB2F229540C700F65349 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AED5DB2D229540C100F65349 /* ApplicationItemModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +286,7 @@
 				AE2C68712292EBB00031678C /* LoginUserItem.xib in Resources */,
 				AED5DB2322951A8700F65349 /* Application.storyboard in Resources */,
 				AED5DB1E22951A4C00F65349 /* Message.storyboard in Resources */,
+				AED5DB2C22953EE000F65349 /* ApplicationCollectionItem.xib in Resources */,
 				AE06992522850D9400E53797 /* Main.storyboard in Resources */,
 				AE2C686D2292AE320031678C /* 登录状态切换的音效.mp3 in Resources */,
 			);
@@ -283,6 +301,7 @@
 			files = (
 				AED5DB282295202D00F65349 /* IconsStackView.swift in Sources */,
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
+				AED5DB2B22953EE000F65349 /* ApplicationCollectionItem.swift in Sources */,
 				AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */,
 				AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */,
 				AE06992E2285134800E53797 /* LoginWindowController.swift in Sources */,
@@ -293,6 +312,7 @@
 				AE2C68672292456F0031678C /* LoginPwdField.swift in Sources */,
 				AED5DB1B2294FEFD00F65349 /* SBWindowController.swift in Sources */,
 				AED5DB172294F1EF00F65349 /* FriendViewController.swift in Sources */,
+				AED5DB2E229540C100F65349 /* ApplicationItemModel.swift in Sources */,
 				AE2C68702292EBB00031678C /* LoginUserItem.swift in Sources */,
 				AE2C68732292EC490031678C /* LoginUserItemModel.swift in Sources */,
 				AE2C686922925C730031678C /* SettingViewController.swift in Sources */,

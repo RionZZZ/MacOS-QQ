@@ -293,17 +293,68 @@
                                     <constraint firstAttribute="trailing" secondItem="ywk-0P-Hah" secondAttribute="trailing" constant="30" id="wU6-0Z-uE5"/>
                                 </constraints>
                             </customView>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PW2-Cx-q7P">
+                                <rect key="frame" x="0.0" y="0.0" width="675" height="291"/>
+                                <clipView key="contentView" id="cvh-Ih-20q">
+                                    <rect key="frame" x="0.0" y="0.0" width="675" height="291"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView selectable="YES" id="6SL-0B-b28">
+                                            <rect key="frame" x="0.0" y="0.0" width="675" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="oKM-uE-Pkh">
+                                                <size key="itemSize" width="280" height="120"/>
+                                                <edgeInsets key="sectionInset" left="20" right="20" top="10" bottom="10"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="7h6-jR-KHz" id="ezB-IE-Zgm"/>
+                                                <outlet property="delegate" destination="7h6-jR-KHz" id="JgH-vz-7Yl"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Ses-yG-1Cm">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="BZG-e4-DCq">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="PW2-Cx-q7P" firstAttribute="leading" secondItem="Zxh-0d-MVa" secondAttribute="leading" id="AOa-e0-NGb"/>
+                            <constraint firstAttribute="trailing" secondItem="PW2-Cx-q7P" secondAttribute="trailing" id="IO5-HC-FHD"/>
+                            <constraint firstAttribute="bottom" secondItem="PW2-Cx-q7P" secondAttribute="bottom" id="NV2-Mz-Ivh"/>
                             <constraint firstItem="a2D-je-h56" firstAttribute="top" secondItem="Zxh-0d-MVa" secondAttribute="top" id="ORR-6B-sag"/>
+                            <constraint firstItem="PW2-Cx-q7P" firstAttribute="top" secondItem="a2D-je-h56" secondAttribute="bottom" id="Xsz-HU-yc6"/>
                             <constraint firstItem="a2D-je-h56" firstAttribute="leading" secondItem="Zxh-0d-MVa" secondAttribute="leading" id="ZVq-dE-Snr"/>
                             <constraint firstAttribute="trailing" secondItem="a2D-je-h56" secondAttribute="trailing" id="k1b-6y-Jci"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="6SL-0B-b28" id="3Kg-kz-Q4y"/>
+                        <segue destination="wTn-vq-0UZ" kind="show" identifier="applicationPush" id="SNZ-y5-38s"/>
+                    </connections>
                 </viewController>
                 <customObject id="rZ8-IM-6De" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="990.5" y="1694.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Api-wH-eZn">
+            <objects>
+                <viewController id="wTn-vq-0UZ" sceneMemberID="viewController">
+                    <view key="view" id="ioD-IP-hoK">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="pMp-nW-IJv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="1694"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="ks4-fE-eM3">
@@ -337,7 +388,7 @@
                 </viewController>
                 <customObject id="6HU-kU-YGw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1631" y="2013"/>
+            <point key="canvasLocation" x="1647" y="2230"/>
         </scene>
     </scenes>
     <resources>
