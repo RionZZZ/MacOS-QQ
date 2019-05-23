@@ -73,8 +73,10 @@ extension ApplicationViewController: NSCollectionViewDelegate, NSCollectionViewD
     }
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        let vc = segue.destinationController as! NSViewController
-        let item = sender as! ApplicationCollectionItem
-        vc.title = item.titleLabel.stringValue
+        if segue.identifier == "applicationPush" {
+            let vc = segue.destinationController as! NSViewController
+            let item = sender as! ApplicationCollectionItem
+            vc.title = item.titleLabel.stringValue
+        }
     }
 }

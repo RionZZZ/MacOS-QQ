@@ -35,6 +35,7 @@
 		AED5DB2B22953EE000F65349 /* ApplicationCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */; };
 		AED5DB2C22953EE000F65349 /* ApplicationCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */; };
 		AED5DB2E229540C100F65349 /* ApplicationItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB2D229540C100F65349 /* ApplicationItemModel.swift */; };
+		AED5DB312295543100F65349 /* FriendSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED5DB302295543100F65349 /* FriendSplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCollectionItem.swift; sourceTree = "<group>"; };
 		AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplicationCollectionItem.xib; sourceTree = "<group>"; };
 		AED5DB2D229540C100F65349 /* ApplicationItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationItemModel.swift; sourceTree = "<group>"; };
+		AED5DB302295543100F65349 /* FriendSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				AED5DB272295202D00F65349 /* IconsStackView.swift */,
 				AED5DB2922953EE000F65349 /* ApplicationCollectionItem.swift */,
 				AED5DB2A22953EE000F65349 /* ApplicationCollectionItem.xib */,
+				AED5DB302295543100F65349 /* FriendSplitView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			files = (
 				AED5DB282295202D00F65349 /* IconsStackView.swift in Sources */,
 				AE06992022850D9300E53797 /* ViewController.swift in Sources */,
+				AED5DB312295543100F65349 /* FriendSplitView.swift in Sources */,
 				AED5DB2B22953EE000F65349 /* ApplicationCollectionItem.swift in Sources */,
 				AE77BADB2293EA6D009A456A /* MainViewController.swift in Sources */,
 				AE77BADD2293F304009A456A /* MainWindowController.swift in Sources */,
